@@ -1,13 +1,8 @@
-import {Prism} from '../../vendors/prism/prism'
+import {saludo} from './components/example'
+import {despedida} from './components/example'
+
 
 (()=>{
-	inicio();
-	Prism();
-	if (document.body.classList.contains('home')) {
-		// functions here
-	}else if (document.body.classList.contains('page2')) {
-		// functions here
-	}else if (document.body.classList.contains('page3')) {
-		// functions here
-	}
+	saludo();
+	despedida();
 })();

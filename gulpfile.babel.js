@@ -29,6 +29,7 @@ const dir = {
 	src   : 'src',
 	dist  : 'public',
 	nm    : 'node_modules',
+	vn    : 'vendors'
 };
 
 const postcssPlugins = [
@@ -172,14 +173,15 @@ gulp.task('images-build', () => {
 		.pipe(gulp.dest('./public/assets/img'))
 });
 
+
+gulp.task('vendors', () => {
+	gulp.src('./src/vendors/**/**')
+		.pipe(gulp.dest('./public/assets/vendors'))
+});
+
 gulp.task('images-dev', () => {
 	gulp.src('./src/img/**/**')
 		.pipe(gulp.dest('./public/assets/img'))
-});
-
-gulp.task('css-dev-vendor', () => {
-	gulp.src('./src/vendors/prismjs.css')
-		.pipe(gulp.dest('./public/assets/css'))
 });
 
 gulp.task('fonts-dev', () => {
@@ -208,7 +210,7 @@ gulp.task('sitemap', () => {
 		.pipe(gulp.dest('./public'))
 });
 
-gulp.task('dev', ['styles-dev', 'pug-dev', 'scripts-dev', 'images-dev','audios-dev', 'videos-dev', 'fonts-dev'], () => {
+gulp.task('dev', ['styles-dev', 'pug-dev', 'scripts-dev', 'images-dev','audios-dev', 'videos-dev', 'fonts-dev', 'vendors'], () => {
 	server.init({
 		server: {
 			baseDir: './public'

@@ -1,0 +1,29 @@
+section
+	section#fragments
+		h2 Fragments
+		p Hit the next arrow...
+		p.fragment ... to step through ...
+		p
+			span(class='fragment') ... a
+			span(class='fragment') fragmented
+			span(class='fragment') slide.
+		aside.notes
+			| This slide has fragments which are also stepped through in the notes window.
+	section
+		h2 Fragment Styles
+		p There's different types of fragments, like:
+		p(class='fragment grow') grow
+		p(class='fragment shrink') shrink
+		p(class='fragment fade-out') fade-out
+		p
+			span(class='fragment fade-right', style='display: inline-block;') fade-right,
+			span(class='fragment fade-up', style='display: inline-block;') up,
+			span.fragment.fade-down(style='display: inline-block;') down,
+			span.fragment.fade-left(style='display: inline-block;') left
+		p.fragment.fade-in-then-out fade-in-then-out
+		p.fragment.fade-in-then-semi-out fade-in-then-semi-out
+		p
+			| Highlight
+			span.fragment.highlight-red red
+			span.fragment.highlight-blue blue
+			span.fragment.highlight-green green

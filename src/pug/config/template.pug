@@ -1,19 +1,57 @@
-block config
-	include vars
+-let currentPage 		= 'home'
+-let content 			= 'My Page'
+-let siteName 			= 'MyGulpBoilerplate'
+-let pageDescription 	= 'Here is the description Page.'
 doctype html
 html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
-	include utilis/body-utilies/IEtags
+	<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+	<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+	<!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 	head
-		include utilis/head-utilies/metatags
+		meta(charset="utf-8")
+		meta(name=pageDescription, content=content)
+		meta(name="viewport" content="initial-scale=1.0, width=device-width")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		meta(name='viewport', content='width = 320, initial-scale = 2.3, user-scalable = no')
+		meta(name='viewport', content='width = device-width, initial-scale = 2.3, user-scalable = no')
+		meta(name='viewport', content='width = device-width, initial-scale = 2.3, minimum-scale = 1, maximum-scale = 5')
+		meta(name='viewport', content='width = 320, initial-scale = 2.3, user-scalable = no')
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+		//-X-UA-compatible
+		meta(http-equiv='X-UA-compatible', content='IE=11')
+		meta(http-equiv='X-UA-Compatible', content='IE=EmulateIE9')
+		meta(http-equiv='X-UA-Compatible', content='IE=9; IE=8; IE=7')
+		meta(http-equiv='X-UA-Compatible', content='IE=EmulateIE8')
+		meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+		meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
+
+		//-iphone
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='format-detection', content='telephone=no')
+		meta(name='apple-mobile-web-app-status-bar-style', content='default')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black')
+		meta(name='format-detection', content='telephone=no')
+		link(rel="shortcut icon", type="image/x-icon", href="img/favicon.png")
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		link(rel="stylesheet" href="assets/vendors/reveal/css/reveal.css")
+		link(rel="stylesheet" href="assets/vendors/reveal/css/theme/black.css")
+		link(rel="stylesheet" href="assets/vendors/prism/prism.css")
 		link(rel="stylesheet" href="assets/css/styles.css")
 		title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName
 	body(class=currentPage, itemscope itemtype="http://schema.org/WebPage")
-		include utilis/body-utilies/upBrowser
 		div(class='reveal')
 			div(class='slides')
 				block main-container
-		include utilis/body-utilies/cdnLibraries
+		script(src="assets/vendors/prism/prism.js")
+		script(src="assets/vendors/reveal/js/html5shiv.js")
+		script(src="assets/vendors/reveal/js/reveal.js")
 		script(src="assets/js/scripts-min.js")
+		script.
+			Reveal.initialize({});
