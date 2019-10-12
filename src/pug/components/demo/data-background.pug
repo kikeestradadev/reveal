@@ -1,9 +1,10 @@
-section(data-background='#00ffff')
-	h2 data-background: #00ffff
-section(data-background='#bb00bb')
-	h2 data-background: #bb00bb
-section(data-background-color='lightblue')
-	h2 data-background: lightblue
+section
+	section(data-background='#00ffff')
+		h2 data-background: #00ffff
+	section(data-background='#bb00bb')
+		h2 data-background: #bb00bb
+	section(data-background-color='lightblue')
+		h2 data-background: lightblue
 section
 	section(data-background='#ff0000')
 		h2 data-background: #ff0000
@@ -18,14 +19,14 @@ section(data-background='rgba(0, 100, 100, 0.2)')
 		h2 Background applied to stack
 	section(data-background='rgb(66, 66, 66)')
 		h2 Background applied to slide inside of stack
-section(data-background-transition='slide', data-background='assets/image1.png')
+section(data-background-transition='slide', data-background='assets/img/img3.jpg')
 	h2 Background image
 section
-	section(data-background-transition='slide', data-background='assets/image1.png')
+	section(data-background-transition='slide', data-background='assets/img/img1.jpg')
 		h2 Background image
-	section(data-background-transition='slide', data-background='assets/image1.png')
+	section(data-background-transition='slide', data-background='assets/img/img2.jpg')
 		h2 Background image
-section(data-background='assets/image2.png', data-background-size='100px', data-background-repeat='repeat', data-background-color='#111')
+section(data-background='assets/img/img4.jpg', data-background-size='100px', data-background-repeat='repeat', data-background-color='#111')
 	h2 Background image
 	pre.
 		\ndata-background-size="100px" data-background-repeat="repeat" data-background-color="#111"

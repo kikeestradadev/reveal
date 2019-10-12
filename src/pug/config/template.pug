@@ -37,11 +37,9 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		meta(name='apple-mobile-web-app-status-bar-style', content='black')
 		meta(name='format-detection', content='telephone=no')
 		link(rel="shortcut icon", type="image/x-icon", href="img/favicon.png")
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
 		link(rel="stylesheet" href="assets/vendors/reveal/css/reveal.css")
 		link(rel="stylesheet" href="assets/vendors/reveal/css/theme/black.css")
+		link(rel="stylesheet" href="assets/vendors/reveal/lib/css/zenburn.css")
 		link(rel="stylesheet" href="assets/vendors/prism/prism.css")
 		link(rel="stylesheet" href="assets/css/styles.css")
 		title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName
@@ -50,7 +48,7 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 			div(class='slides')
 				block main-container
 		script(src="assets/vendors/prism/prism.js")
-		script(src="assets/vendors/reveal/js/html5shiv.js")
+		script(src="assets/vendors/reveal/lib/js/head.min.js")
 		script(src="assets/vendors/reveal/js/reveal.js")
 		script(src="assets/js/scripts-min.js")
 		script.
