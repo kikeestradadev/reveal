@@ -4,10 +4,6 @@
 -let pageDescription 	= 'Here is the description Page.'
 doctype html
 html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
-	<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-	<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-	<!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]-->
-	<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 	head
 		meta(charset="utf-8")
 		meta(name=pageDescription, content=content)
@@ -37,19 +33,19 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		meta(name='apple-mobile-web-app-status-bar-style', content='black')
 		meta(name='format-detection', content='telephone=no')
 		link(rel="shortcut icon", type="image/x-icon", href="img/favicon.png")
-		link(rel="stylesheet" href="assets/vendors/reveal/css/reveal.css")
-		link(rel="stylesheet" href="assets/vendors/reveal/css/theme/black.css")
-		link(rel="stylesheet" href="assets/vendors/reveal/lib/css/zenburn.css")
-		link(rel="stylesheet" href="assets/vendors/prism/prism.css")
-		link(rel="stylesheet" href="assets/css/styles.css")
+		link(rel="stylesheet" href="./vendors/reveal/css/reveal.css")
+		link(rel="stylesheet" href="./vendors/reveal/css/theme/black.css")
+		link(rel="stylesheet" href="./vendors/reveal/lib/css/zenburn.css")
+		link(rel="stylesheet" href="./vendors/prism/prism.css")
+		link(rel="stylesheet" href="styles.css")
 		title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName
 	body(class=currentPage, itemscope itemtype="http://schema.org/WebPage")
 		div(class='reveal')
 			div(class='slides')
 				block main-container
-		script(src="assets/vendors/prism/prism.js")
-		script(src="assets/vendors/reveal/lib/js/head.min.js")
-		script(src="assets/vendors/reveal/js/reveal.js")
-		script(src="assets/js/scripts-min.js")
+		script(src="./vendors/prism/prism.js")
+		script(src="./vendors/reveal/lib/js/head.min.js")
+		script(src="./vendors/reveal/js/reveal.js")
+		script(src="index.js") 
 		script.
 			Reveal.initialize({});
