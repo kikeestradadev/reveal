@@ -1,2 +1,2 @@
-code[class*=language-],pre[class*=language-]{font-size:.7em}
+code[class*=language-],pre[class*=language-]{font-size:.7em}.slides{inset:50% auto auto 50%!important;transform:translate(-50%,-50%) scale(1)!important}.slides,.slides>section{height:100%!important;width:100%!important}
 /*# sourceMappingURL=styles.css.map */
