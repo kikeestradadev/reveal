@@ -2,3 +2,16 @@ code[class*="language-"],
 pre[class*="language-"] {
 	font-size: .7em; 
 }
+
+.slides{
+	width: 100% !important;
+    height: 100% !important;
+    inset: 50% auto auto 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+	// border: 1px solid white !important;
+}
+.slides > section{
+	// border: 1px solid white !important;
+	height: 100% !important;
+	width:100% !important;
+}
